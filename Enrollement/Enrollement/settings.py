@@ -12,16 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import cloudinary
-
-
-
-#Cloudinary Config         
-cloudinary.config( 
-  cloud_name = "dyver0pdv", 
-  api_key = "447873215718225", 
-  api_secret = "BjDLTOpa-ldeKGvD5jQmYfCNscY" 
-)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -50,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'interns',
-    'cloudinary',
+    
 ]
 
 MIDDLEWARE = [

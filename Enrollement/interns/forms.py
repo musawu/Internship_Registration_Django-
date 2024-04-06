@@ -1,5 +1,5 @@
 from django import forms
-from cloudinary.models import CloudinaryField
+
 
 class InternForm(forms.Form):
     Intern_fname = forms.CharField(max_length=30)
