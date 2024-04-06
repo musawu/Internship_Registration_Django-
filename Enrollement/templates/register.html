@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+  <style>
+    /* Custom styles for form input fields */
+    form {
+      max-width: 500px; /* Set maximum width for the form */
+      margin: 0 auto; /* Center the form horizontally */
+      text-align: center; /* Center text within the form */
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+      width: 100%; /* Set input fields to 100% width */
+      padding: 15px; /* Increase padding for input fields */
+      margin-bottom: 20px; /* Add more space below each input field */
+      border-radius: 8px; /* Add rounded corners to input fields */
+      border: 1px solid #ccc; /* Add border to input fields */
+      box-sizing: border-box; /* Ensure padding and border are included in the width */
+    }
+
+    h1 {
+      text-align: center; /* Center the title */
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" style="background-color: #28a745; color: #fff; padding: 15px 20px; border-radius: 8px; text-decoration: none;">Register</button>
+  </form>
+</div>
+{% endblock %}

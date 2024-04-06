@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <center><h1>{{ title }}</h1></center>
+
+ <table>
+   <thead>
+   
+     <style>
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+      
+        th, td {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+      
+        th {
+          background-color: #f2f2f2;
+          color: #333333;
+        }
+      
+        tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+      
+        tr:hover {
+          background-color: #f2f2f2;
+        }
+      </style>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <!-- Uncomment this line if you want to display profile pictures -->
+            <!-- <th>Profile Picture</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          {% for k in queryset %}
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td>{{ k.Intern_fname }}</td>
+              <td>{{ k.Intern_lname }}</td>
+              <td>{{ k.Intern_email }}</td>
+              <td>{{ k.Intern_phoneNum }}</td>
+              <!-- Uncomment this line if you want to display profile pictures -->
+              <!-- <td><img src="{{ k.Intern_profile_picture }}" alt="Profile Picture" style="max-width: 100px; height: auto;"></td> -->
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+{% endblock %}

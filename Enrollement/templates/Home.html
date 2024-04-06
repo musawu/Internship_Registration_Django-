@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h2>Welcome to your Internship Enrollment Page!</h2>
+    <p>You can proceed and register!</p>
+    <a href="{% url 'register' %}" class="btn" style="background-color: #28a745; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Register Now</a>
+
+  </div>
+{% endblock %}
+
+<style>
+  /* Content container */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Heading style */
+  h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  /* Paragraph style */
+  p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  /* Button link style */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #218838; /* Darker green color on hover */
+  }
+</style>
